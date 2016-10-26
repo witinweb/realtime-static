@@ -16,13 +16,13 @@
     <!--uncache-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--enduncache-->
-    <script src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 </head>
 <body ng-class="{ index: $state.includes('index') }" ng-controller="MasterCtrl" ng-cloak>
     <!-- Main Content -->
     <div ui-view class="fade-effect"></div>
     <!-- SCRIPTS -->
     <!-- build:js lib/js/lib.min.js -->
+    <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="components/angular/angular.min.js"></script>
     <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
     <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>

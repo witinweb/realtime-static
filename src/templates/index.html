@@ -1,19 +1,11 @@
 <ng-analytics-auth label="Hallo:&nbsp;" hide-on-auth="true" auth-container="embed-api-auth-container"></ng-analytics-auth>
-<div class="card" ng-controller="AndCtrl">
-    <ng-analytics-view view-selector-container="view-selector-1-container" auth-container="embed-api-auth-container"></ng-analytics-view>
-    <ng-analytics-active-users label="Current users:" increase-class="increaser" decrease-class="decreaser" active-users-container="active-users-container-1" view-selector-container="view-selector-1-container" auth-container="embed-api-auth-container"></ng-analytics-active-users>
-    <ng-analytics-chart ng-repeat="chart in charts" chart="chart" view-selector-container="view-selector-1-container" auth-container="embed-api-auth-container"></ng-analytics-chart>
-</div>
-<div class="card" ng-controller="iOSCtrl">
-    <ng-analytics-view view-selector-container="view-selector-2-container" auth-container="embed-api-auth-container"></ng-analytics-view>
-    <ng-analytics-active-users label="Current users:" increase-class="increaser" decrease-class="decreaser" active-users-container="active-users-container-2" view-selector-container="view-selector-2-container" auth-container="embed-api-auth-container"></ng-analytics-active-users>
-    <ng-analytics-chart ng-repeat="chart in charts" chart="chart" view-selector-container="view-selector-2-container" auth-container="embed-api-auth-container"></ng-analytics-chart>
-</div>
-<div class="card" ng-controller="WebCtrl">
-    <ng-analytics-view view-selector-container="view-selector-3-container" auth-container="embed-api-auth-container"></ng-analytics-view>
-    <ng-analytics-active-users label="Current users:" increase-class="increaser" decrease-class="decreaser" active-users-container="active-users-container-4" view-selector-container="view-selector-3-container" auth-container="embed-api-auth-container"></ng-analytics-active-users>
-    <ng-analytics-chart ng-repeat="chart in charts" chart="chart" view-selector-container="view-selector-3-container" auth-container="embed-api-auth-container"></ng-analytics-chart>
-</div>
-<div class="card">
-  <h2>서버 건강지수</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" ng-repeat="card in cards">
+      <h1>{{card.title}}</h1>
+      <div ng-if="card.container">
+          <ng-analytics-active-users label="활성 사용자 수 :" increase-class="increaser" decrease-class="decreaser" active-users-container="{{card.container}}" default-ids="card.defaultIds" auth-container="embed-api-auth-container"></ng-analytics-active-users>
+      </div>
+    </div>
+  </div>
 </div>
