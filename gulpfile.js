@@ -14,8 +14,8 @@ var gulp = require('gulp'),
     ngHtml2Js = require("gulp-ng-html2js");
 
 var config = {
-    accessKeyId: "AKIAJNXWDT4UFTZ5CO4Q",
-    secretAccessKey: "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"
+    accessKeyId: "AKIAIX35UNOX7F477EQQ",
+    secretAccessKey: "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"
 }
 
 var s3 = require('gulp-s3-upload')(config);
