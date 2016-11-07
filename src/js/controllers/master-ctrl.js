@@ -11,25 +11,22 @@ function MasterCtrl($scope, $rootScope, $window, $http) {
       'title':'Web',
       'container':'active-users-container-1',
       'defaultIds':{
-          'ids': 'ga:80446779'
+          'ids': 'ga:80446779',
+          'pollingInterval': 65
       }
     },{
       'title':'Android',
       'container':'active-users-container-2',
       'defaultIds':{
-          'ids': 'ga:77512838'
+          'ids': 'ga:77512838',
+          'pollingInterval': 65
       }
     },{
       'title':'iOS',
       'container':'active-users-container-3',
       'defaultIds':{
-          'ids': 'ga:84926759'
-      }
-    },{
-      'title':'서버건강지수',
-      'container':'',
-      'defaultIds':{
-          'ids': ''
+          'ids': 'ga:84926759',
+          'pollingInterval': 65
       }
     }
   ]
