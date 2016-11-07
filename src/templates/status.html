@@ -1,0 +1,21 @@
+<ng-analytics-auth label="Hallo:&nbsp;" hide-on-auth="true" auth-container="embed-api-auth-container"></ng-analytics-auth>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="title"><a ui-sref="index">굿닥 실시간 지표</a><h1>
+    </div>
+    <div class="col-md-4" ng-repeat="card in cards">
+      <h2>{{card.title}}</h2>
+      <div ng-if="card.container">
+          <ng-analytics-active-users label="활성 사용자 수 :" increase-class="increaser" decrease-class="decreaser" active-users-container="{{card.container}}" default-ids="card.defaultIds" auth-container="embed-api-auth-container"></ng-analytics-active-users>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="margin-top:20px">
+    <div class="row">
+      <div class="col-md-12">
+        <iframe src="https://docs.google.com/spreadsheets/d/1Pc04NTKmT7CTsPN-0uVeLT4-3xgxIBTJAqFRfa4lxIY/edit#gid=1887976831" width="100%" height="1000px"></iframe>
+      </div>
+    </div>
+</div>

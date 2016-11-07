@@ -11,5 +11,9 @@ angular.module('GoodocRealtimeStatic').config(['$stateProvider', '$urlRouterProv
             url: '/',
             templateUrl: '/templates/index.html'
         })
+        .state('status', {
+            url: '/status',
+            templateUrl: '/templates/status.html'
+        })
       }
 ]);
